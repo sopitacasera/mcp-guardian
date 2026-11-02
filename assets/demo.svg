@@ -1,0 +1,111 @@
+<svg width="760" height="406" viewBox="0 0 760 406" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .t { font-family: 'Fira Code','Cascadia Code',Consolas,'Courier New',monospace; font-size: 13px; }
+      .ln { opacity: 0; animation: fa .18s ease forwards; }
+      @keyframes fa { to { opacity: 1; } }
+      @keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+      .l01{animation-delay:.5s}  .l02{animation-delay:1.1s}
+      .l03{animation-delay:1.6s} .l04{animation-delay:2.1s}
+      .l05{animation-delay:2.6s} .l06{animation-delay:3.2s}
+      .l07{animation-delay:3.8s} .l08{animation-delay:4.3s}
+      .l09{animation-delay:4.9s} .l10{animation-delay:5.4s}
+      .l11{animation-delay:5.9s} .l12{animation-delay:6.5s}
+      .l13{animation-delay:7.0s} .l14{animation-delay:7.4s}
+      .cur{opacity:0; animation: blink 1s step-start infinite; animation-delay:7.6s}
+    </style>
+    <linearGradient id="gbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#080c14"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Window -->
+  <rect width="760" height="406" rx="12" fill="url(#gbg)"/>
+  <rect width="760" height="406" rx="12" fill="none" stroke="rgba(46,158,247,0.14)" stroke-width="1.5"/>
+
+  <!-- Title bar -->
+  <rect width="760" height="40" rx="12" fill="#161b22"/>
+  <rect y="28" width="760" height="12" fill="#161b22"/>
+
+  <!-- Dots -->
+  <circle cx="24" cy="20" r="6" fill="#ff5f57" opacity=".9"/>
+  <circle cx="46" cy="20" r="6" fill="#ffbd2e" opacity=".9"/>
+  <circle cx="68" cy="20" r="6" fill="#28c840" opacity=".9"/>
+
+  <!-- Title -->
+  <text x="380" y="25" text-anchor="middle" font-family="'Inter',system-ui,sans-serif" font-size="11.5" fill="#6b7990" letter-spacing="1.2">mcp-guardian  ·  security scanner</text>
+
+  <!-- L01: command -->
+  <text class="ln l01 t" y="68">
+    <tspan x="20" fill="#6b7990">❯ </tspan><tspan fill="#2E9EF7">mcp-guardian</tspan><tspan fill="#e6edf3"> scan claude_desktop_config.json</tspan>
+  </text>
+
+  <!-- L02: separator -->
+  <text class="ln l02 t" y="89" fill="#21262d"><tspan x="20">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</tspan></text>
+
+  <!-- L03: scanning fs -->
+  <text class="ln l03 t" y="110">
+    <tspan x="20" fill="#6b7990">Scanning </tspan><tspan fill="#e6edf3">filesystem-server</tspan><tspan fill="#6b7990">  (3 tools)</tspan>
+  </text>
+
+  <!-- L04: ok -->
+  <text class="ln l04 t" y="130">
+    <tspan x="20" fill="#3fb950">  ✓ </tspan><tspan fill="#a8b3cf">Tool hashes recorded</tspan>
+  </text>
+
+  <!-- L05: medium -->
+  <text class="ln l05 t" y="150">
+    <tspan x="20" fill="#d29922">  ⚠ </tspan><tspan fill="#a8b3cf">return_channel  </tspan><tspan fill="#e6edf3">read_file</tspan><tspan fill="#6b7990">  ·  </tspan><tspan fill="#d29922">MEDIUM</tspan><tspan fill="#6b7990">  ·  CVSS </tspan><tspan fill="#f0883e">5.9</tspan>
+  </text>
+
+  <!-- L06: scanning web (extra gap) -->
+  <text class="ln l06 t" y="176">
+    <tspan x="20" fill="#6b7990">Scanning </tspan><tspan fill="#e6edf3">web-search-server</tspan><tspan fill="#6b7990">  (2 tools)</tspan>
+  </text>
+
+  <!-- L07: critical -->
+  <text class="ln l07 t" y="196">
+    <tspan x="20" fill="#f85149">  ✗ </tspan><tspan fill="#a8b3cf">PROMPT INJECTION  </tspan><tspan fill="#e6edf3">search_web</tspan><tspan fill="#6b7990">  ·  </tspan><tspan fill="#f85149">CRITICAL</tspan><tspan fill="#6b7990">  ·  CVSS </tspan><tspan fill="#f85149">9.1</tspan>
+  </text>
+
+  <!-- L08: pattern -->
+  <text class="ln l08 t" y="213">
+    <tspan x="36" fill="#6b7990">→ pattern: </tspan><tspan fill="#d29922">"ignore previous instructions"</tspan>
+  </text>
+
+  <!-- L09: high -->
+  <text class="ln l09 t" y="233">
+    <tspan x="20" fill="#f85149">  ✗ </tspan><tspan fill="#a8b3cf">TOOL POISONING  </tspan><tspan fill="#e6edf3">description changed</tspan><tspan fill="#6b7990">  ·  </tspan><tspan fill="#f0883e">HIGH</tspan><tspan fill="#6b7990">  ·  CVSS </tspan><tspan fill="#f0883e">8.1</tspan>
+  </text>
+
+  <!-- L10: hash -->
+  <text class="ln l10 t" y="250">
+    <tspan x="36" fill="#6b7990">→ hash mismatch — tool description changed since baseline</tspan>
+  </text>
+
+  <!-- L11: separator -->
+  <text class="ln l11 t" y="272" fill="#21262d"><tspan x="20">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</tspan></text>
+
+  <!-- L12: FAIL badge + counts -->
+  <g class="ln l12">
+    <rect x="20" y="281" width="50" height="20" rx="4" fill="rgba(248,81,73,0.13)"/>
+    <text class="t" y="295">
+      <tspan x="45" text-anchor="middle" fill="#f85149" font-weight="bold">FAIL</tspan>
+      <tspan x="78" fill="#6b7990">1 </tspan><tspan fill="#f85149">CRITICAL</tspan>
+      <tspan fill="#6b7990">  ·  1 </tspan><tspan fill="#f0883e">HIGH</tspan>
+      <tspan fill="#6b7990">  ·  1 </tspan><tspan fill="#d29922">MEDIUM</tspan>
+    </text>
+  </g>
+
+  <!-- L13: report -->
+  <text class="ln l13 t" y="319">
+    <tspan x="20" fill="#6b7990">Report → </tspan><tspan fill="#2E9EF7">./mcp-guardian-report.html</tspan>
+  </text>
+
+  <!-- L14: next prompt -->
+  <text class="ln l14 t" y="344" fill="#6b7990"><tspan x="20">❯ </tspan></text>
+
+  <!-- Blinking cursor -->
+  <rect class="cur" x="36" y="331" width="8" height="14" rx="1" fill="#2E9EF7"/>
+</svg>
